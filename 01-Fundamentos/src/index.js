@@ -30,7 +30,7 @@ function validarMonto(monto) {
     }
     return numero;
 } 
-// Si el numero no finito o es menor que cero se lanza el error  de monto válido 
+// Si el numero no finito o es menor que cero se lanza el error  de monto inválido 
 
 
 
