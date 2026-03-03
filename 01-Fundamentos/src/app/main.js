@@ -36,6 +36,12 @@ function validarUnidad(unidad) { //Validar unidad
     }   
     return unidad;
 }
+/**
+ * Esta funcion recibe una unidad y la convierte en minúsculas 
+ * también verificasi esta unidad existe en alguna de las dos istas
+ * sino está en ninguna lanza error
+ */
+
 
 // Obtener el tipo de categoria
 function obtenerCategoria(unidad) {
@@ -81,14 +87,13 @@ function convertirLongitud(valor, from, to) {
     throw new Error("Error en conversión de longitud");
 }
 
-//Función principal--la de la lógica
 function convertir(valor, from, to){
 
 const numero = validarValor(valor);
 const unidad1 = validarUnidad(from); //Esta unidad es la unidad que se desea cambiar
 const unidad2 = validarUnidad(to); //Esta es la unidad final
 
-const categoria1 = obtenerCategoria(unidad1); //Categoriza inicial
+const categoria1 = obtenerCategoria(unidad1); //Categoria inicial
 const categoria2 = obtenerCategoria(unidad2); //Categoria final
 
 //Validación para que no se mezclen las categorías
@@ -106,11 +111,11 @@ if (categoria1 === "longitud") {
 
 //Pruebas temperatura
 try {
-console.log(convertir(100, "c", "f").toFixed(2), "F");
+console.log(convertir(100, "C", "F").toFixed(2), "F");
 console.log(convertir(32, "f", "c").toFixed(2), "C");
 console.log(convertir(0, "c", "f").toFixed(2), "F");
-console.log(convertir(-40, "c", "f").toFixed(2), "F");
-console.log(convertir(40, "c", "k").toFixed(2), "K");
+console.log(convertir(-40, "c", "f").toFixed(2), "F")
+console.log(convertir(40, "C", "K").toFixed(2), "K");
 console.log(convertir(28, "k", "c").toFixed(2), "C");
 } catch (error) {
     console.error(error.message);
@@ -118,9 +123,9 @@ console.log(convertir(28, "k", "c").toFixed(2), "C");
 
 //Pruebas Longitud
 try {
-console.log(convertir(1500, "m", "km").toFixed(2), "km");
+console.log(convertir(1500, "M", "KM").toFixed(2), "km");
 console.log(convertir(20, "cm", "m").toFixed(2), "m");
-console.log(convertir(55, "km", "m"), "m");
+console.log(convertir(55, "KM", "M"), "m");
 console.log(convertir(1.2, "km", "m").toFixed(2), "m");
 } catch (error) {
     console.error(error.message);
