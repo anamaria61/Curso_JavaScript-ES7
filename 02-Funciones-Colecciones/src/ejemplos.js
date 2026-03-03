@@ -44,11 +44,22 @@ const expenses = [
 
 const foodExpenses = expenses.filter((expense) => expense.category === "food"); 
 // filter crea un nuevo array con los elementos que cumplen la condición
-console.log(foodExpenses); // Imprime [{ amount: 50, category: "food" }, { amount: 30, category: "food" }]
+console.log(foodExpenses); 
+// Imprime [{ amount: 50, category: "food" }, { amount: 30, category: "food" }]
 
 const totalFoodExpense = foodExpenses.reduce((total, expense) => total + expense.amount, 0);
-// reduce acumula un valor a través de los elementos del array, en este caso sumando los montos de los gastos de comida
+// reduce acumula un valor a través de los elementos del array, en este caso 
+// sumando los montos de los gastos de comida
 console.log(totalFoodExpense); // Imprime 80
+
+// map, filter, reduce son métodos muy poderosos para trabajar con arrays 
+// de manera funcional y evitar mutaciones.
+// ejemplo de map y filter juntos
+const numbers = [1, 2, 3, 4, 5];
+const evenSquares = numbers
+  .filter((num) => num % 2 === 0) // Filtra los números pares
+  .map((num) => num * num); // Luego mapea esos números al cuadrado
+console.log(evenSquares); // Imprime [4, 16]
 
 
 /**
@@ -85,3 +96,64 @@ console.log(resultados);
 const horas = [1, 2, 3, 4, 5, 6];
 const minutos = horas.map(hora => hora * 60);
 console.log(minutos);
+
+// EJEMPLOS DE FILTER
+// 1.
+const costos = [ 5000, 6000, 10000, 200];
+const baratos = costos.filter( costo => costo < 10000); //Filtra los números menores a 10000
+console.log(baratos);
+
+//REDUCE 1.
+const gastos = costos.reduce((total, costo) => total + costo, 0);
+console.log(gastos) // suma los numeros del array dando como resultado 21200
+
+// 2.
+const prendas = [
+  { precio: 100000, categoria: "deportiva" },
+  { precio: 60000, categoria: "casual" },
+  { precio: 150000, categoria: "elegante" },
+  { precio: 90000, categoria: "deportiva" },
+  { precio: 200000, categoria: "casual" },
+  { precio: 180000, categoria: "elegante" }
+];
+const prendasDeportivas = prendas.filter((prenda) => prenda.categoria === "deportiva");
+console.log(prendasDeportivas);
+
+// REDUCE 2.
+const sumaPrendasDeportivas = prendasDeportivas.reduce((total, prenda) => total + prenda.precio, 0);
+console.log(sumaPrendasDeportivas);
+
+//FILTRO 3.
+const prendasCasuales = prendas.filter((prenda) => prenda.categoria === "casual");
+console.log(prendasCasuales);
+
+// REDUCE 3.
+const sumaPrendasCasuales = prendasCasuales.reduce((total, prenda) => total + prenda.precio, 0);
+console.log(sumaPrendasCasuales);
+
+//FILTRO 4.
+const prendasElegantes =prendas.filter((prenda) => prenda.categoria === "elegante");
+console.log(prendasElegantes);
+
+//REDUCE 4.
+const sumaPrendasElegantes = prendasElegantes.reduce((total , prenda) => total + prenda.precio, 0);
+console.log(sumaPrendasElegantes);
+
+//FILTRO 5.
+const datos = [
+  {estuadiante: "Felipe", calificacion: 2.5},
+  {estuadiante: "Juana", calificacion: 3.5},
+  {estuadiante: "Felipe", calificacion: 4.0},
+  {estuadiante: "Juana", calificacion: 3.0},
+  {estuadiante: "Felipe", calificacion: 3.8},
+  {estuadiante: "Juana", calificacion: 2.9},
+];
+
+const calificacion = datos.filter((dato) => dato.estuadiante === "Felipe");
+console.log(calificacion);
+
+//REDUCE 5.
+const suma = calificacion.reduce((total, dato) => total + dato.calificacion, 0) / calificacion.length;
+console.log(suma);
+// .length propiedad que dice la cantidad de elementos que hay dentro del array
+// en este caso 3 elementos en el array de calificacion
