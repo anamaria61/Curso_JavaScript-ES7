@@ -89,7 +89,7 @@ console.log(edades);
 
 //4.
 const notas = [ 3.0, 4.1, 5.0, 2.9];
-const resultados = notas.map(nota => nota >=3 ? "Aprobó" : "Reprobó" ) ;
+const resultados = notas.map(nota => nota >=3 ? "Aprobó" : "Reprobó" ) ; //operador ternario ? condicion
 console.log(resultados);
 
 //5.
