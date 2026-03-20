@@ -4,9 +4,10 @@ Al final imprime:
 "¡Despegue!" 
  */
 
- let contador = 10; // Poisición inicial
- while (contador >= 1) { //mientras el contador sea mayor o igual a 1 se realiza el ciclo
-   console.log(contador); 
-   contador -- // restar 1 en cada vuelta, para llegar al 1
- }
- console.log("Despegue!"); 
+let contador = 10; // Poisición inicial
+while (contador >= 1) {
+  //mientras el contador sea mayor o igual a 1 se realiza el ciclo
+  console.log(contador);
+  contador--; // restar 1 en cada vuelta, para llegar al 1
+}
+console.log("Despegue!");
