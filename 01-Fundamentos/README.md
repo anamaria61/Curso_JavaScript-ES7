@@ -1,4 +1,4 @@
-![Mapa1](imagenes/mapa1.png)
+![Mapa1](Desktop/imagenes/mapa1.png)
 📘 Introducción a Git
 📌 ¿Qué es Git y GitHub?
 
@@ -72,7 +72,7 @@ Atom
 
 
 
-![Mapa2](imagenes/mapa2.png)
+![Mapa2](Desktop/imagenes/mapa2.png)
 📚 Comandos Básicos de Git
 📦 ¿Qué es el Staging y los repositorios?
 🔹 git init
@@ -166,7 +166,7 @@ Es fundamental entender bien qué hace cada comando y sus riesgos para trabajar 
 
 
 
-![Mapa3](imagenes/mapa3.png)
+![Mapa3](Desktop/imagenes/mapa3.png)
 🔄 Flujo de Trabajo Básico en Git
 🟢 Trabajo básico
 📁 Directorio de trabajo
@@ -281,7 +281,7 @@ git commit -am "mensaje"
 
 
 
-![Mapa4](imagenes/mapa4.png)
+![Mapa4](Desktop/imagenes/mapa4.png)
 🌐 Repositorios Remotos en GitHub
 🔷 ¿Qué es GitHub?
 
